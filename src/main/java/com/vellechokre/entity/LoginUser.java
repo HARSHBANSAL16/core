@@ -19,102 +19,102 @@ import com.vellechokre.entity.master.LoginAuthority;
 @Entity(name = EntityContant.LOGIN_USER)
 public class LoginUser {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private long id;
 
-    @Column
-    @NotNull(message = "Username can't be null.")
-    private String username;
+  @Column
+  @NotNull(message = "Username can't be null.")
+  private String username;
 
-    @Column
-    // @JsonIgnore
-    private String password;
+  @Column
+  // @JsonIgnore
+  private String password;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    private List<LoginAuthority> loginAuthorities;
+  @ManyToMany(fetch = FetchType.EAGER)
+  private List<LoginAuthority> loginAuthorities;
 
-    @CreatedDate
-    @NotNull(message = "activeTill can't be null.")
-    private Date activeTill;
+  @CreatedDate
+  @NotNull(message = "activeTill can't be null.")
+  private Date activeTill;
 
-    /**
-     * @return the id
-     */
-    public long getId() {
+  /**
+   * @return the id
+   */
+  public long getId() {
 
-        return id;
-    }
+    return id;
+  }
 
-    /**
-     * @param id the id to set
-     */
-    public void setId(long id) {
+  /**
+   * @param id the id to set
+   */
+  public void setId(final long id) {
 
-        this.id = id;
-    }
+    this.id = id;
+  }
 
-    /**
-     * @return the username
-     */
-    public String getUsername() {
+  /**
+   * @return the username
+   */
+  public String getUsername() {
 
-        return username;
-    }
+    return username;
+  }
 
-    /**
-     * @param username the username to set
-     */
-    public void setUsername(String username) {
+  /**
+   * @param username the username to set
+   */
+  public void setUsername(final String username) {
 
-        this.username = username;
-    }
+    this.username = username;
+  }
 
-    /**
-     * @return the password
-     */
-    public String getPassword() {
+  /**
+   * @return the password
+   */
+  public String getPassword() {
 
-        return password;
-    }
+    return password;
+  }
 
-    /**
-     * @param password the password to set
-     */
-    public void setPassword(String password) {
+  /**
+   * @param password the password to set
+   */
+  public void setPassword(final String password) {
 
-        this.password = password;
-    }
+    this.password = password;
+  }
 
-    /**
-     * @return the loginAuthorities
-     */
-    public List<LoginAuthority> getLoginAuthorities() {
+  /**
+   * @return the loginAuthorities
+   */
+  public List<LoginAuthority> getLoginAuthorities() {
 
-        return loginAuthorities;
-    }
+    return loginAuthorities;
+  }
 
-    /**
-     * @param loginAuthorities the loginAuthorities to set
-     */
-    public void setLoginAuthorities(List<LoginAuthority> loginAuthorities) {
+  /**
+   * @param loginAuthorities the loginAuthorities to set
+   */
+  public void setLoginAuthorities(final List<LoginAuthority> loginAuthorities) {
 
-        this.loginAuthorities = loginAuthorities;
-    }
+    this.loginAuthorities = loginAuthorities;
+  }
 
-    /**
-     * @return the activeTill
-     */
-    public Date getActiveTill() {
+  /**
+   * @return the activeTill
+   */
+  public Date getActiveTill() {
 
-        return activeTill;
-    }
+    return activeTill;
+  }
 
-    /**
-     * @param activeTill the activeTill to set
-     */
-    public void setActiveTill(Date activeTill) {
+  /**
+   * @param activeTill the activeTill to set
+   */
+  public void setActiveTill(final Date activeTill) {
 
-        this.activeTill = activeTill;
-    }
+    this.activeTill = activeTill;
+  }
 }
